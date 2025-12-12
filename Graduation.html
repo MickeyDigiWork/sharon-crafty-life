@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduation | Sharon's Crafty Life</title>
+  <link rel="stylesheet" href="CSS-style.css">
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background:#f1e3ea;">
+
+<header>
+  <div class="nav-wrapper">
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="navbar">
+      <a href="Index.html">Home</a>
+      <a href="videos.html">Videos</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+
+     <div class="dropdown">
+        <button class="dropbtn">Junk Journals ▼</button>
+        <div class="dropdown-content">
+          <a href="travel.html">Travel Journals</a>
+          <a href="baby.html">Baby Journals</a>
+          <a href="prayer.html">Prayer Journals</a>
+          <a href="golden.html">Little Golden Book Journals</a>
+          <a href="wedding.html">Wedding Journals</a>
+          <a href="graduation.html">Graduation Journals</a>
+        </div>
+      </div>
+
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div style="text-align:center;">
+    <img src="Crafty Life.JPEG" alt="Sharon's Crafty Life Logo" style="width:300px; max-width:100%;">
+  </div>
+
+  <h1 style="text-align:center; padding:20px;">Graduation</h1>
+</header>
+
+
+<div class="container" style="max-width:900px; background:white; padding:20px; margin:40px auto; border-radius:12px;">
+  <!-- MAIN CONTENT -->
+<div class="container" style="max-width:900px; margin:40px auto; background:white; padding:20px; border-radius:12px;">
+
+  <p>Celebrate academic achievements with personalized graduation journals</p>
+
+  <div class="grid">
+
+    <!-- 23 SCRAPBOOK IMAGES -->
+    <!-- Rotations cycle: rotate1,2,3,4 then repeat -->
+
+    <!-- 1–4 -->
+    <div class="scrap-photo rotate1"><img src="graduation/Pic1.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate2"><img src="graduation/Pic2.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate3"><img src="graduation/Pic3.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate4"><img src="graduation/Pic4.jpeg"><span class="tape"></span></div>
+    <!-- 5–8 -->
+    <div class="scrap-photo rotate1"><img src="graduation/Pic5.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate2"><img src="graduation/Pic6.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate3"><img src="graduation/Pic7.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate4"><img src="graduation/Pic8.jpeg"><span class="tape"></span></div>
+    <!-- 9–12 -->
+     <div class="scrap-photo rotate1"><img src="graduation/Pic9.jpeg"><span class="tape"></span></div>
+     <div class="scrap-photo rotate2"><img src="graduation/Pic10.jpeg"><span class="tape"></span></div>
+     <div class="scrap-photo rotate3"><img src="graduation/Pic11.jpeg"><span class="tape"></span></div>
+     <div class="scrap-photo rotate4"><img src="graduation/Pic12.jpeg"><span class="tape"></span></div>
+    <!-- 13–16 -->
+    <div class="scrap-photo rotate1"><img src="graduation/Pic13.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate2"><img src="graduation/Pic14.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate3"><img src="graduation/Pic15.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate4"><img src="graduation/Pic16.jpeg"><span class="tape"></span></div>
+    <!-- 17–20 -->
+    <div class="scrap-photo rotate1"><img src="graduation/Pic17.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate2"><img src="graduation/Pic18.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate3"><img src="graduation/Pic19.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate4"><img src="graduation/Pic20.jpeg"><span class="tape"></span></div>
+    <!-- 21–23 -->
+    <div class="scrap-photo rotate1"><img src="graduation/Pic21.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate2"><img src="graduation/Pic22.jpeg"><span class="tape"></span></div>
+    <div class="scrap-photo rotate3"><img src="graduation/Pic23.jpeg"><span class="tape"></span></div>
+
+    </div>
+</div>
+
+<!-- LIGHTBOX STRUCTURE -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <span class="lightbox-arrow left" id="lightboxPrev">&#10094;</span>
+  <img id="lightboxImg" src="">
+  <span class="lightbox-arrow right" id="lightboxNext">&#10095;</span>
+</div>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+  const images = document.querySelectorAll(".scrap-photo img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.getElementById("lightboxClose");
+  const nextBtn = document.getElementById("lightboxNext");
+  const prevBtn = document.getElementById("lightboxPrev");
+
+  let currentIndex = 0;
+
+  // Open lightbox
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // Close
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Next
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+
+  // Previous
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+
+  // Click outside closes
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+
+  // ESC, Arrow Keys
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") lightbox.style.display = "none";
+    if (e.key === "ArrowRight") nextBtn.click();
+    if (e.key === "ArrowLeft") prevBtn.click();
+  });
+</script>
+<footer style="text-align:center; padding:20px; color:#555;">
+  © 2025 Craft Vlog & Stampin' Up! Demonstrator
+</footer>
+
+<footer class="site-credit">
+  <p class="site-credit">Website designed by <strong>Mickey Digital Works</strong></p>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  if (navToggle && navbar) {
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('nav-open');
+    });
+  }
+</script>
+</body>
+</html>
+
+</body>
+</html>

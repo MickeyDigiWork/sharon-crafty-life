@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sharon's Crafty Life</title>
+  <link rel="stylesheet" href="CSS-style.css">
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background:#f1e3ea;">
+
+<header>
+  <div class="nav-wrapper">
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="navbar">
+      <a href="Index.html">Home</a>
+      <a href="videos.html">Videos</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+
+     <div class="dropdown">
+        <button class="dropbtn">Junk Journals ▼</button>
+        <div class="dropdown-content">
+          <a href="travel.html">Travel Journals</a>
+          <a href="baby.html">Baby Journals</a>
+          <a href="prayer.html">Prayer Journals</a>
+          <a href="golden.html">Little Golden Book Journals</a>
+          <a href="Wedding.html">Wedding Journals</a>
+          <a href="Graduation.html">Graduation Journals</a>
+        </div>
+      </div>
+
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div style="text-align:center;">
+    <img src="Crafty Life.JPEG" alt="Sharon's Crafty Life Logo" style="width:300px; max-width:100%;">
+  </div>
+
+  <h1 style="text-align:center; padding:20px;">Contact</h1>
+</header>
+
+
+<div class="container" style="max-width:900px; margin:40px auto; padding:20px; background:#e4a6d4; border-radius:12px;">
+
+  <p>Get in touch with me for questions, tutorials, or collaborations!</p>
+
+  <form action="mailto:smcspad1965@yahoo.com" method="post" enctype="text/plain"
+        style="display:flex; flex-direction:column; gap:15px;">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" style="padding:10px; background:#333; color:white; border-radius:8px;">Send Message</button>
+  </form>
+
+  <h3>Social Media</h3>
+  <ul>
+    <li><a href="https://www.youtube.com/@sharonmcspadden7336" target="_blank">YouTube</a></li>
+    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+    <li><a href="https://www.facebook.com/877053482157342" target="_blank">Facebook</a></li>
+  </ul>
+
+  <div class="share-wrapper rotate2">
+  <span class="tape"></span>
+  <button class="share-btn">Share This Page</button>
+</div>
+
+</div>
+
+<footer style="text-align:center; padding:20px; color:#555;">
+  © 2025 Craft Vlog & Stampin' Up! Demonstrator
+</footer>
+
+<footer class="site-credit">
+  <p class="site-credit">Website designed by <strong>Mickey Digital Works</strong></p>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  if (navToggle && navbar) {
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+<script>
+document.querySelector('.share-btn').addEventListener('click', async () => {
+  if (navigator.share) {
+    // Mobile + modern browsers
+    await navigator.share({
+      title: document.title,
+      url: window.location.href
+    });
+  } else {
+    // Desktop fallback
+    alert("Sharing is not supported on this device. You can copy this link: " + window.location.href);
+  }
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
