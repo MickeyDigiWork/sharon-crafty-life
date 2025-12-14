@@ -292,3 +292,39 @@ video {
 .share-btn:hover {
   background: #d48fc3;
 }
+
+/* Mobile default */
+.navbar {
+  display: none;
+  flex-direction: column;
+  background: #e4a6d4;
+  padding: 15px;
+}
+
+/* When hamburger is clicked */
+.navbar.open {
+  display: flex;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    background: none;
+  }
+}
