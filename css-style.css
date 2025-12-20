@@ -346,3 +346,17 @@ video {
   height: 100%;
   border-radius: 12px;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
