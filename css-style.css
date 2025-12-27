@@ -217,7 +217,7 @@ img {
 
 .navbar a,
 .dropbtn {
-  color: white;
+  color: purple;
   text-decoration: none;
   font-weight: bold;
   background: none;
@@ -234,7 +234,7 @@ img {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9e6f4;
+  background-color: purple;
   min-width: 180px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   border-radius: 8px;
@@ -249,7 +249,7 @@ img {
 }
 
 .dropdown-content a:hover {
-  background-color: #f2c8e6;
+  background-color: purple;
 }
 
 .dropdown:hover .dropdown-content {
