@@ -326,7 +326,7 @@ video {
     flex-direction: row;
     gap: 20px;
     background: none;
-    background-color: purple;
+    background-color: #e4a6d4;
   }
 }
 
