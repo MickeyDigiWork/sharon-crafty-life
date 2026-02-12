@@ -361,3 +361,63 @@ body{
 main {
   flex: 1;
 }
+
+/* =========================
+   CONTACT FORM FIX
+   ========================= */
+
+.contact-box {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #e4a6d4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #e49cbf;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Make inputs fill their grid cells */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Message box spans full width */
+.contact-form textarea {
+  grid-column: 1 / -1;
+  min-height: 140px;
+}
+
+/* Button spans full width */
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0077cc;
+}
+
+/* Mobile stacks everything */
+@media (max-width: 700px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}

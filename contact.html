@@ -63,19 +63,18 @@
   <h1 style="text-align:center; padding:20px;">Contact</h1>
 </header>
 
-<div class="container" style="max-width:900px; margin:40px auto; padding:20px; background:#e4a6d4; border-radius:12px;">
-
+<div class="contact-box">
   <p>Get in touch with me for questions, tutorials, or collaborations!</p>
 
-  <form action="https://formspree.io/f/mpqjprjd" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
+  <!-- Formspree -->
+  <form class="contact-form" action="https://formspree.io/f/mpqjprjd" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-  <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
-  <button type="submit">Send Message</button>
-</form>
+    <button type="submit">Send Message</button>
+  </form>
 
 
   <h3>Social Media</h3>
